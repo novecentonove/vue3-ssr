@@ -1,5 +1,8 @@
-import { createApp } from 'vue'
+import { createSSRApp } from 'vue'
+import router from './router'
 import './style.css'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+createSSRApp(App)
+  .use(router)
+  .mount('#app')
